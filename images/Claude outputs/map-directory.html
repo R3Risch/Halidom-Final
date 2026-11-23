@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Map Directory | Halidom</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cantata+One&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <span class="logo-text">Halidom</span>
+      <img class="logo-mark" src="images/logo-mark.svg" alt="">
+    </a>
+    <a class="header-link" href="about.html">About</a>
+  </header>
+
+  <div class="page-body">
+
+    <nav class="sidebar">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <img class="nav-icon" src="images/icon-home.svg" alt="Home">
+            <span class="nav-label">Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="timeline.html">
+            <img class="nav-icon" src="images/icon-timeline.svg" alt="Timeline">
+            <span class="nav-label">Timeline</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-current" href="map-directory.html">
+            <span class="nav-circle">
+              <img class="nav-icon" src="images/icon-map-active.svg" alt="Map">
+            </span>
+            <span class="nav-label">Map</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="events.html">
+            <img class="nav-icon" src="images/icon-events.svg" alt="Events">
+            <span class="nav-label">Events</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="people.html">
+            <img class="nav-icon" src="images/icon-people.svg" alt="People">
+            <span class="nav-label">People</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="locations.html">
+            <img class="nav-icon" src="images/icon-places.svg" alt="Places">
+            <span class="nav-label">Places</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="stripe-dark"></div>
+    <div class="stripe-pink"></div>
+
+    <main class="map-main">
+      <article>
+        <section class="map-frame">
+          <div class="map-viewport">
+            <!-- Keep the place names in order from the top of the map to the bottom (see styles.css) -->
+            <div class="map-canvas">
+              <img class="map-image" src="images/map.png" alt="Map of Altea">
+              <a class="map-label map-label-demides" href="location-demides.html">Demides</a>
+              <a class="map-label map-label-new-alberia" href="location-new-alberia.html">New Alberia</a>
+              <a class="map-label map-label-hampton" href="location-hampton.html">Hampton</a>
+              <a class="map-label map-label-cordelia" href="location-cordelia.html">Cordelia</a>
+              <a class="map-label map-label-brookmire" href="location-brookmire.html">Brookmire</a>
+              <a class="map-label map-label-mistholt" href="location-mistholt.html">Mistholt</a>
+              <a class="map-label map-label-embalia" href="location-embalia.html">Embalia</a>
+              <a class="map-label map-label-st-lotier" href="location-st-lotier.html">St. Lotier</a>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,807 @@
+/* ==========================================
+   HALIDOM - styles.css
+   Designed at 1440px wide (desktop).
+   ========================================== */
+
+/* ---------- COLORS ---------- */
+:root {
+  --white: #ffffff;
+  --pink: #fd0053;
+  --dark-red: #a80139;
+  --dark-grey: #2b2024;
+  --black: #000000;
+}
+
+/* ---------- PAGE ---------- */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--black);
+  color: var(--white);
+  font-family: "Cantata One", serif;
+}
+
+/* Holds the sidebar, the two stripes, and the main content side by side */
+.page-body {
+  flex: 1;
+  display: flex;
+}
+
+/* ---------- HEADER ---------- */
+/* Pink bar (75px) with a dark red band (29px) underneath it */
+.site-header {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--pink);
+  border-bottom: 29px solid var(--dark-red);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 14px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.logo-text {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 64px;
+  line-height: 75px;
+}
+
+.logo-mark {
+  width: 40px;
+  height: 59px;
+  margin-left: 4px;
+}
+
+.header-link {
+  box-sizing: border-box;
+  width: 80px;
+  height: 41px;
+  margin-right: 28px;
+  padding: 8px 0 0 9px;
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 20px;
+  line-height: 25px;
+  text-decoration: none;
+}
+
+.header-link:hover {
+  background-color: var(--dark-red);
+}
+
+/* ---------- SIDEBAR ---------- */
+/* Dark grey panel. The black strip on the left holds the icons. */
+.sidebar {
+  width: 335px;
+  margin: 25px 24px 0 0;
+  background-color: var(--dark-grey);
+}
+
+.nav-list {
+  box-sizing: border-box;
+  width: 120px;
+  margin: 0;
+  padding: 24px 0 0 0;
+  list-style: none;
+  background-color: var(--black);
+  height: 100%;
+}
+
+.nav-item {
+  margin-bottom: 50px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  padding-left: 20px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-icon {
+  width: 38px;
+  height: 38px;
+}
+
+/* The label is hidden until you hover the link (or it is the current page) */
+.nav-label {
+  display: none;
+  margin-left: 16px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 64px;
+  line-height: 65px;
+  white-space: nowrap;
+}
+
+.nav-link:hover .nav-label {
+  display: block;
+}
+
+/* The page you are on: grey pill, black circle, pink icon, label always showing */
+.nav-current {
+  margin-left: 38px;
+  padding-left: 0;
+  background-color: var(--dark-grey);
+  border-radius: 33px 0 0 33px;
+}
+
+.nav-current .nav-label {
+  display: block;
+}
+
+.nav-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: var(--black);
+}
+
+/* ---------- STRIPES ---------- */
+.stripe-dark {
+  width: 26px;
+  background-color: var(--dark-red);
+}
+
+/* Pulled up 29px so it crosses the dark red band under the header */
+.stripe-pink {
+  width: 26px;
+  margin-top: -29px;
+  background-color: var(--pink);
+}
+
+/* ---------- HOME PAGE ---------- */
+/* The swoosh and arch artwork is one image used as the background */
+.home-main {
+  flex: 1;
+  padding: 488px 46px 0 124px;
+  background-image: url("images/home-swoosh.svg");
+  background-repeat: no-repeat;
+  background-position: 9px -46px;
+  overflow: hidden;
+}
+
+.quote {
+  width: 859px;
+}
+
+.quote-text {
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.quote-author {
+  margin: 13px 0 0 0;
+  font-size: 20px;
+  text-align: right;
+}
+
+
+/* ==========================================
+   INTERIOR PAGES (About, and the pages after it)
+   ========================================== */
+
+/* ---------- LEFT COLUMN ---------- */
+.side-column {
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Back button: grey normally, dark red on hover, pink while clicking */
+.back-button {
+  display: flex;
+  align-items: center;
+  width: 137px;
+  height: 79px;
+  margin: 38px 0 42px 18px;
+  padding: 0 0 0 12px;
+  border: 0;
+  border-radius: 25px;
+  background-color: var(--dark-grey);
+  color: var(--white);
+  font-family: "Cantata One", serif;
+  font-size: 30px;
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: var(--dark-red);
+}
+
+.back-button:active {
+  background-color: var(--pink);
+}
+
+.back-icon {
+  width: 30px;
+  height: 37px;
+  margin-right: 8px;
+}
+
+/* Decorative bars that cross the stripes */
+.bar-dark-red {
+  height: 29px;
+  background-color: var(--dark-red);
+}
+
+/* Pink bar reaches 26px past the column so it crosses the dark red stripe */
+.bar-pink {
+  position: relative;
+  height: 29px;
+  margin-right: -26px;
+  background-color: var(--pink);
+}
+
+/* Grey panel at the bottom of the left column */
+.side-panel {
+  flex: 1;
+  width: 183px;
+  margin-top: 29px;
+  background-color: var(--dark-grey);
+}
+
+/* ---------- ABOUT PAGE ---------- */
+.about-main {
+  flex: 1;
+  padding: 25px 34px 0 30px;
+  background-image: url("images/about-swoosh.svg");
+  background-repeat: no-repeat;
+  background-position: 151px -46px;
+  overflow: hidden;
+}
+
+.about-title {
+  margin: 0 0 24px 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+  font-weight: normal;
+  line-height: 72px;
+}
+
+.about-subheading {
+  margin: 0 0 38px 0;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 38px;
+}
+
+.about-text {
+  margin: 0 0 38px 0;
+  font-size: 20px;
+  line-height: 25px;
+  text-indent: 73px;
+}
+
+/* ==========================================
+   TIMELINE PAGE
+   ========================================== */
+
+/* Two background images: the pink "progress" line sits on top of the grey line with the arrow.
+   The two numbers in each background-position are the left and top of each image. */
+.timeline-main {
+  flex: 1;
+  background-image: url("images/timeline-progress.svg"), url("images/timeline-line.svg");
+  background-repeat: no-repeat;
+  background-position: 53px 481px, 44px 47px;
+  overflow: hidden;
+}
+
+/* The list of events. Each event is moved into place with margins,
+   so the dots land on top of the diagonal line in the background. */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 57px 0 0 0;
+  list-style: none;
+}
+
+.event-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.event-label {
+  margin: 0;
+  font-size: 30px;
+  line-height: 38px;
+  white-space: nowrap;
+}
+
+/* The round marker on the line */
+.event-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: var(--dark-red);
+}
+
+.event-dot-center {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--black);
+}
+
+/* ----- Position of each event -----
+   On the event: margin-left = distance from the left edge, margin-top = gap above it.
+   On the dot or label: small offsets that line it up with the line. */
+
+.event-stopping-halidoms-heart {
+  margin-left: 690px;
+}
+.event-stopping-halidoms-heart .event-dot {
+  margin: -17px 0 0 100px;
+}
+
+.event-hunt-for-the-king-of-fools {
+  margin: 93px 0 0 625px;
+}
+.event-hunt-for-the-king-of-fools .event-label {
+  margin: 13px 0 0 37px;
+}
+
+.event-siege-of-mistholt {
+  margin: -69px 0 0 331px;
+}
+.event-siege-of-mistholt .event-dot {
+  margin: 11px 0 0 109px;
+}
+
+.event-grand-masquerade {
+  margin: 85px 0 0 281px;
+}
+.event-grand-masquerade .event-label {
+  margin: 21px 0 0 28px;
+}
+
+.event-great-hampton-bake-off {
+  margin: -149px 0 0 17px;
+}
+.event-great-hampton-bake-off .event-dot {
+  margin: 39px 0 0 87px;
+}
+
+
+/* ==========================================
+   MAP DIRECTORY PAGE
+   ========================================== */
+.map-main {
+  flex: 1;
+  padding: 26px 20px 27px 22px;
+}
+
+/* Dark red frame around the map */
+.map-frame {
+  width: 957px;
+  padding: 19px 15px 18px 15px;
+  background-color: var(--dark-red);
+}
+
+/* The window you look at the map through. The map is bigger than the window,
+   and script.js lets you drag it around. */
+.map-viewport {
+  width: 957px;
+  height: 830px;
+  overflow: hidden;
+  background-color: var(--white);
+  cursor: grab;
+}
+
+.map-dragging {
+  cursor: grabbing;
+}
+
+/* The whole map. It is the size of the map image (1865px by 2049px).
+   The image comes first and the place names are stacked under it.
+   Each place name has a negative top margin that pulls it up onto the map
+   and a left margin that moves it sideways to its spot. */
+.map-canvas {
+  display: flex;
+  flex-direction: column;
+  width: 1865px;
+  height: 2049px;
+}
+
+.map-image {
+  display: block;
+  flex-shrink: 0;
+  width: 1865px;
+  height: 2049px;
+}
+
+/* align-self keeps each link only as wide as its text */
+.map-label {
+  align-self: flex-start;
+  color: var(--white);
+  font-size: 30px;
+  line-height: 36px;
+  text-decoration: none;
+  white-space: nowrap;
+  text-shadow: 1px 1px 0 var(--pink), -1px -1px 0 var(--pink), 1px -1px 0 var(--pink), -1px 1px 0 var(--pink);
+}
+
+/* Hover: the name turns black with a white outline */
+.map-label:hover {
+  color: var(--black);
+  text-shadow: 1px 1px 0 var(--white), -1px -1px 0 var(--white), 1px -1px 0 var(--white), -1px 1px 0 var(--white);
+}
+
+/* Margins are: top, right, bottom, left.
+   The names must stay in this order (top of the map to the bottom). */
+.map-label-demides {
+  margin: -1812px 0 0 532px;
+}
+
+.map-label-new-alberia {
+  margin: 234px 0 0 710px;
+}
+
+.map-label-hampton {
+  margin: 0px 0 0 501px;
+}
+
+.map-label-cordelia {
+  margin: 291px 0 0 672px;
+}
+
+.map-label-brookmire {
+  margin: 495px 0 0 1531px;
+}
+
+.map-label-mistholt {
+  margin: 9px 0 0 215px;
+}
+
+.map-label-embalia {
+  margin: 222px 0 0 710px;
+}
+
+.map-label-st-lotier {
+  margin: 111px 0 0 273px;
+}
+
+/* ---------- ZOOMED IN MAP ----------
+   script.js adds the class map-zoomed to the map window when you click the map.
+   The map and the place names get bigger, and every name moves to its new spot. */
+.map-zoomed .map-canvas {
+  width: 3860px;
+  height: 4241px;
+}
+
+.map-zoomed .map-image {
+  width: 3860px;
+  height: 4241px;
+}
+
+.map-zoomed .map-label {
+  font-size: 60px;
+  line-height: 72px;
+}
+
+.map-zoomed .map-label-demides {
+  margin: -3750px 0 0 1101px;
+}
+
+.map-zoomed .map-label-new-alberia {
+  margin: 487px 0 0 1469px;
+}
+
+.map-zoomed .map-label-hampton {
+  margin: 2px 0 0 1037px;
+}
+
+.map-zoomed .map-label-cordelia {
+  margin: 605px 0 0 1391px;
+}
+
+.map-zoomed .map-label-brookmire {
+  margin: 1027px 0 0 3169px;
+}
+
+.map-zoomed .map-label-mistholt {
+  margin: 21px 0 0 445px;
+}
+
+.map-zoomed .map-label-embalia {
+  margin: 462px 0 0 1469px;
+}
+
+.map-zoomed .map-label-st-lotier {
+  margin: 232px 0 0 565px;
+}
+
+/* ==========================================
+   INTRO PAGES (Events, and later People and Places)
+   A big title with paragraphs of text underneath
+   ========================================== */
+.intro-main {
+  flex: 1;
+  padding: 25px 32px 0 31px;
+}
+
+.intro-title {
+  margin: 0 0 20px 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+  font-weight: normal;
+  line-height: 72px;
+}
+
+.intro-text {
+  margin: 0;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+/* Smaller heading used above a paragraph (Places page) */
+.intro-subheading {
+  margin: 0;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 38px;
+}
+
+/* ---------- PLACES PAGE: list of cities in two columns ---------- */
+.place-columns {
+  display: flex;
+  margin: 26px 0 0 37px;
+}
+
+.place-column {
+  display: flex;
+  width: 446px;
+}
+
+/* The two decorative bars beside each column of names */
+.place-bar-dark-red {
+  width: 26px;
+  height: 358px;
+  margin-top: 28px;
+  background-color: var(--dark-red);
+}
+
+.place-bar-pink {
+  width: 26px;
+  height: 421px;
+  background-color: var(--pink);
+}
+
+.place-list {
+  width: 356px;
+  margin: 0 0 0 38px;
+  padding: 0;
+  list-style: none;
+}
+
+.place-item {
+  margin-bottom: 51px;
+}
+
+.place-link {
+  display: block;
+  color: var(--white);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+  line-height: 72px;
+  text-decoration: none;
+}
+
+/* Hover: the city name turns pink */
+.place-link:hover {
+  color: var(--pink);
+}
+
+
+/* ---------- PEOPLE PAGE ---------- */
+/* Intro paragraph is bigger here (30px) than on the Events and Places pages */
+.people-text {
+  margin: 0;
+  font-size: 30px;
+  line-height: 38px;
+}
+
+/* Bars on the left, the three names on the right */
+.people-columns {
+  display: flex;
+  margin: 46px 0 0 176px;
+}
+
+.people-list {
+  margin: 39px 0 0 17px;
+  padding: 0;
+  list-style: none;
+}
+
+.people-item {
+  margin-bottom: 64px;
+}
+
+.people-link {
+  display: block;
+  color: var(--white);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+  line-height: 72px;
+  text-decoration: none;
+}
+
+/* Hover: the name turns pink */
+.people-link:hover {
+  color: var(--pink);
+}
+
+
+/* ==========================================
+   CITY PAGES (Demides, New Alberia, Hampton, and the rest)
+   ========================================== */
+.city-main {
+  flex: 1;
+  padding: 23px 30px 0 33px;
+}
+
+.city-title {
+  margin: 0 0 5px 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+  font-weight: normal;
+  line-height: 72px;
+}
+
+.city-about {
+  margin-left: 4px;
+}
+
+.city-subheading {
+  margin: 0;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 38px;
+}
+
+.city-tagline {
+  margin: 0;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.city-text {
+  width: 966px;
+  margin: 0;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.city-poi {
+  margin: 11px 0 0 8px;
+}
+
+.city-poi-title {
+  margin: 0 0 72px 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+  font-weight: normal;
+  line-height: 72px;
+}
+
+.city-poi-list {
+  margin: 0;
+  padding: 0 0 0 46px;
+}
+
+.city-poi-item {
+  font-size: 30px;
+  line-height: 38px;
+}
+
+
+/* ==========================================
+   CHARACTER PAGES (Biscuit Shale, Claude Wallace, Pocket Palewood)
+   ========================================== */
+.character-main {
+  flex: 1;
+  padding: 31px 0 0 0;
+}
+
+/* Portrait on the left, name and details on the right */
+.character-top {
+  display: flex;
+}
+
+/* The picture frame. The image is a little bigger than the frame,
+   so it is shifted to crop the edges like in Figma. */
+.character-portrait {
+  flex-shrink: 0;
+  width: 257px;
+  height: 370px;
+  margin-left: 55px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+.character-image {
+  display: block;
+  width: 283px;
+  height: 407px;
+  margin: -19px 0 0 -13px;
+}
+
+/* Biscuit's picture is shifted a bit further left */
+.character-image-biscuit {
+  margin-left: -26px;
+}
+
+.character-info {
+  flex: 1;
+  max-width: 756px;
+  margin-left: 32px;
+}
+
+.character-name {
+  margin: 2px 0 12px 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+  font-weight: normal;
+  line-height: 72px;
+}
+
+.character-stat {
+  margin: 0 0 0 8px;
+  font-size: 30px;
+  line-height: 38px;
+}
+
+.character-quote {
+  margin-top: 38px;
+}
+
+/* The long biography under the portrait */
+.character-bio {
+  max-width: 1116px;
+  margin: 29px 0 0 38px;
+}
+
+.character-text {
+  margin: 0;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+/* Pocket and Biscuit use smaller text so their longer stories fit */
+.character-text-small {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* First line of a paragraph pushed in */
+.character-indent {
+  text-indent: 30px;
+}
+
+/* Blank space before a new group of paragraphs */
+.character-gap {
+  margin-top: 25px;
+}
