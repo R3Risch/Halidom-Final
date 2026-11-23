@@ -4,8 +4,8 @@
 var map = document.querySelector(".map-viewport");
 
 // Start with the map scrolled to the same spot as the Figma design
-map.scrollLeft = 296;
-map.scrollTop = 499;
+map.scrollLeft = 237;
+map.scrollTop = 399;
 
 var isDragging = false;
 var didDrag = false;
