@@ -81,6 +81,7 @@ body {
 /* ---------- SIDEBAR ---------- */
 /* Dark grey panel. The black strip on the left holds the icons. */
 .sidebar {
+  flex-shrink: 0;
   width: 268px;
   margin: 20px 19px 0 0;
   background-color: var(--dark-grey);
@@ -152,12 +153,14 @@ body {
 
 /* ---------- STRIPES ---------- */
 .stripe-dark {
+  flex-shrink: 0;
   width: 21px;
   background-color: var(--dark-red);
 }
 
 /* Pulled up 23px so it crosses the dark red band under the header */
 .stripe-pink {
+  flex-shrink: 0;
   width: 21px;
   margin-top: -23px;
   background-color: var(--pink);
@@ -199,6 +202,7 @@ body {
 
 /* ---------- LEFT COLUMN ---------- */
 .side-column {
+  flex-shrink: 0;
   width: 168px;
   display: flex;
   flex-direction: column;
@@ -394,7 +398,7 @@ body {
    ========================================== */
 .map-main {
   flex: 1;
-  padding: 21px 16px 22px 18px;
+  padding: 21px 15px 22px 18px;
 }
 
 /* Dark red frame around the map */
