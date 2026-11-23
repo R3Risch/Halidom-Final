@@ -738,8 +738,8 @@ body {
   display: flex;
 }
 
-/* The picture frame. The image is a little bigger than the frame,
-   so it is shifted to crop the edges like in Figma. */
+/* The picture frame. The portrait images are already cropped to the frame
+   shape, so each one simply fills the frame. */
 .character-portrait {
   flex-shrink: 0;
   width: 206px;
@@ -752,14 +752,8 @@ body {
 
 .character-image {
   display: block;
-  width: 226px;
-  height: 326px;
-  margin: -15px 0 0 -10px;
-}
-
-/* Biscuit's picture is shifted a bit further left */
-.character-image-biscuit {
-  margin-left: -21px;
+  width: 206px;
+  height: 296px;
 }
 
 .character-info {
