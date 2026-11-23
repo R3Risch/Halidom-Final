@@ -1,0 +1,188 @@
+/* ---------- Colors (from the Figma design) ---------- */
+body {
+  --pink: #fd0053;
+  --dark-red: #a80139;
+  --brown: #2b2024;
+  --black: #000000;
+  --white: #ffffff;
+
+  margin: 0;
+  background-color: var(--brown);
+}
+
+
+/* ---------- Header (top pink bar) ---------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  background-color: var(--pink);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.logo-text {
+  margin-left: 11px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 64px;
+  line-height: 75px;
+}
+
+.logo-knot {
+  height: 58px;
+  margin-left: 16px;
+}
+
+.header-nav-list {
+  margin: 0 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* About button: pink on the pink bar, dark red on hover */
+.about-link {
+  display: block;
+  padding: 8px 9px;
+  border-radius: 10px;
+  font-family: 'Cantata One', serif;
+  font-size: 20px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.about-link:hover {
+  background-color: var(--dark-red);
+}
+
+/* ---------- Page: sidebar on the left, main on the right ---------- */
+.page {
+  display: flex;
+  min-height: 949px;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  display: flex;
+  flex: none;
+  width: 359px;
+  border-top: 29px solid var(--dark-red);
+  border-right: 26px solid var(--dark-red);
+  background-color: var(--black);
+}
+
+/* The icon column. "position: relative" lets the hover labels
+   sit on top of the brown panel. */
+.nav-list {
+  position: relative;
+  flex: none;
+  width: 119px;
+  margin: 0;
+  padding: 52px 0 0 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 115px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.nav-icon {
+  width: 38px;
+  height: 38px;
+  margin-left: 19px;
+}
+
+/* Hover version of the icon is hidden at first. It is one image with the
+   curved brown bump, the black circle, and the pink icon together.
+   It is taller than the 115px row, so it spills a little above and below. */
+.nav-icon-hover {
+  display: none;
+  width: 86px;
+  height: 166px;
+  margin-left: 53px;
+}
+
+/* The label is also hidden until hover */
+.nav-label {
+  display: none;
+  margin-left: 0;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 64px;
+  color: var(--white);
+}
+
+/* Hovering a link (or being on that page) swaps the icon and shows the label */
+.nav-link:hover .nav-icon,
+.current .nav-icon {
+  display: none;
+}
+
+.nav-link:hover .nav-icon-hover,
+.current .nav-icon-hover {
+  display: block;
+}
+
+.nav-link:hover .nav-label,
+.current .nav-label {
+  display: block;
+}
+
+.nav-panel {
+  flex: none;
+  width: 216px;
+  margin-top: 25px;
+  background-color: var(--brown);
+}
+
+/* ---------- Main area ---------- */
+.main {
+  flex: 1;
+  border-left: 26px solid var(--pink);
+  background-color: var(--black);
+}
+
+.home {
+  padding-top: 25px;
+  border-top: 29px solid var(--dark-red);
+}
+
+/* Ribbons and sun are one image that stretches with the window */
+.hero {
+  min-height: 895px;
+  background-image: url(images/ribbons-sun.svg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* The quote stays at a fixed height from the top of the hero.
+   Make padding-top bigger to move the quote lower, smaller to move it up. */
+.quote {
+  width: 83%;
+  margin-left: 12%;
+  padding-top: 500px;
+}
+
+.quote-text {
+  margin: 0;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  color: var(--white);
+}
+
+.quote-author {
+  margin: 13px 0 0 0;
+  font-family: 'Cantata One', serif;
+  font-size: 20px;
+  text-align: right;
+  color: var(--white);
+}
